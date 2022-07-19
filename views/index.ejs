@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CRUD NODE JS Y MYSQL EN BOOSTRAP</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="/" class="navbar-brand">MI SEGUNDO CRUD</a>
+    </nav>
+   
+        <a href="/create" class="btn btn-primary ">CREAR</a>
+    
+   <div class="container">
+    <h1 >Clientes</h1>
+    <div class="row mt-5 ">
+        <div class="col-md-10">
+            <div class="card ">
+                <div class="card-body">
+                    <form action="/" method="post">
+
+                        <table class="table table-bordered table-striped table-center mt-4">
+                            <thead class="bg-dark text-white">
+                                <tr>
+                                    <th scope="col">N°</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">Phone</th>
+                                    <th scope="col">Accion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <% result.forEach(element => { %>
+                            <tr>
+                                <td><%=element.id%></td>
+                                <td><%=element.name%></td>
+                                <td><%=element.adress%></td>
+                                <td><%=element.phone%></td>
+                                <td>
+                                    <a href="/edit/<%=element.id%>" class="btn btn-primary">Editar</a>
+                                    <a href="/delete/<%=element.id%>" class="btn btn-danger">Borrar</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <% }) %>
+                        </table>
+                   </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

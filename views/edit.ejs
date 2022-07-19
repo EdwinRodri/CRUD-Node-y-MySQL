@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CRUD NODE JS Y MYSQL EN BOOSTRAP</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="/" class="navbar-brand">MI SEGUNDO CRUD</a>
+    </nav>
+
+
+    <div class="container">
+        <h1 class="ml-50">Editar Cliente</h1>
+        <div class="row mt-5">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-body">
+
+                        <form action="/update/<%=user.id%>" method="post">
+                            
+                            <div class="form-group">
+                                <input type="text"  name="name"  value="<%=user.name%>" class="form-control">
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text"  name="adress"  value="<%=user.adress%>"  class="form-control">
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text"  name="phone"  value="<%=user.phone%>"  class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-3">Editar</button>
+                            <a href="/" class="btn btn-secondary mt-3">Cancelar</a>
+                       </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
